@@ -295,9 +295,9 @@ def get_base64_image(image_path):
         encoded = base64.b64encode(img_file.read()).decode()
     return f"data:image/jpg;base64,{encoded}"
     
-img_base64 = get_image_base64("C:/Users/pc/Desktop/Projet/Logo-oncf.png")
+img_base64 = get_image_base64("Logo-oncf.png")
 
-background_image = get_base64_image("C:/Users/pc/Desktop/Projet/oncf1.jpg") 
+background_image = get_base64_image("oncf1.jpg") 
 
 # Interface de connexion
 def show_login():
