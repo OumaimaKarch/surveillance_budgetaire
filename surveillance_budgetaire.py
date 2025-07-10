@@ -263,12 +263,12 @@ st.markdown("""
 #@st.cache_data
 
 def load_sample_data():
-    services_data = pd.read_excel("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx", sheet_name="services")
-    projets_data = pd.read_excel("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx", sheet_name="projets")
-    engagements_data = pd.read_excel("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx", sheet_name="engagements")
-    depenses_data = pd.read_excel("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx", sheet_name="dépenses")
-    alertes_data = pd.read_excel("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx", sheet_name="alertes")
-    users_data =  pd.read_excel("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx", sheet_name="utilisateurs")
+    services_data = pd.read_excel("BD_ONCF.xlsx", sheet_name="services")
+    projets_data = pd.read_excel("BD_ONCF.xlsx", sheet_name="projets")
+    engagements_data = pd.read_excel("BD_ONCF.xlsx", sheet_name="engagements")
+    depenses_data = pd.read_excel("BD_ONCF.xlsx", sheet_name="dépenses")
+    alertes_data = pd.read_excel("BD_ONCF.xlsx", sheet_name="alertes")
+    users_data =  pd.read_excel("BD_ONCF.xlsx", sheet_name="utilisateurs")
     return (
         pd.DataFrame(services_data),
         pd.DataFrame(projets_data),
@@ -1078,7 +1078,7 @@ def main():
     try:
         nouvelles_alertes = generer_alertes_automatiques(
             df_projets, df_engagements, df_depenses, 
-            "C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx"
+            "BD_ONCF.xlsx"
         )
         
         # Afficher les nouvelles alertes s'il y en a
@@ -1346,7 +1346,7 @@ def main():
         st.header("Statistiques des alertes")
         
         # Recharger les alertes les plus récentes
-        df_alertes_fresh = pd.read_excel("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx", sheet_name="alertes")
+        df_alertes_fresh = pd.read_excel("BD_ONCF.xlsx", sheet_name="alertes")
         
         # Filtrer les alertes actives
         #alertes_actives = df_alertes_fresh[df_alertes_fresh['statut'] == 'Active']
