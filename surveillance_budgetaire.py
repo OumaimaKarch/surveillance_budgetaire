@@ -21,7 +21,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-excel_file = pd.ExcelFile("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx")
+#excel_file = pd.ExcelFile("C:/Users/pc/Desktop/Projet/BD_ONCF.xlsx")
+excel_file = pd.ExcelFile("BD_ONCF.xlsx")
 
 st.markdown("""
 <style>
